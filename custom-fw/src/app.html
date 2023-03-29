@@ -1,0 +1,17 @@
+<template>
+  <require from="/app.scss"></require>
+  <div class="container">
+    <div class="static-container">
+      <div class="static-element">
+        <nav>
+          <ul>
+            <li><a route-href="route: home">Home</a></li>
+            <li><a route-href="route: about">About</a></li>
+            <li><a route-href="route: contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <router-view></router-view>
+  </div>
+</template>
