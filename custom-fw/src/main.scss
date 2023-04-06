@@ -1,0 +1,136 @@
+// Colors
+$black: #000;
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+$blue: #007bff;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #28a745;
+$teal: #20c997;
+$cyan: #17a2b8;
+
+// Typography
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-size-base: 1rem; // 16px
+$font-size-sm: 0.875rem; // 14px
+$font-size-lg: 1.25rem; // 20px
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$line-height-base: 1.5;
+
+// Spacing
+$spacer: 1rem;
+$spacer-05: $spacer * 0.5;
+$spacer-1: $spacer;
+$spacer-15: $spacer * 1.5;
+$spacer-2: $spacer * 2;
+$spacer-3: $spacer * 3;
+$spacer-4: $spacer * 4;
+$spacer-5: $spacer * 5;
+
+// Breakpoints
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+// Pre-made Transitions
+$transition-fast: 0.15s;
+$transition-medium: 0.3s;
+$transition-slow: 0.5s;
+$transition-base: all $transition-medium ease-in-out;
+
+// Borders
+$border-width: 1px;
+$border-color: $gray-300;
+$border-radius: 0.25rem;
+$border-radius-lg: 0.5rem;
+$border-radius-sm: 0.2rem;
+
+// Shadows
+$box-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.075);
+$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+$box-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.2);
+
+// Easing Functions
+$ease-in: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+$ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+$ease-in-back: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+$ease-out-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$ease-in-out-back: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+// Advanced Transitions
+$transition-fade: opacity $transition-medium $ease-in-out;
+$transition-slide-right: transform $transition-medium $ease-in-out;
+$transition-slide-left: transform $transition-medium $ease-in-out;
+$transition-slide-up: transform $transition-medium $ease-in-out;
+$transition-slide-down: transform $transition-medium $ease-in-out;
+$transition-grow: transform $transition-medium $ease-out;
+$transition-shrink: transform $transition-medium $ease-out;
+$transition-rotate: transform $transition-medium $ease-in-out;
+$transition-background: background-color $transition-medium $ease-in-out;
+$transition-border: border-color $transition-medium $ease-in-out;
+$transition-color: color $transition-medium $ease-in-out;
+
+// Mixins for Advanced Transitions
+@mixin fade($duration: $transition-medium, $easing: $ease-in-out) {
+  transition: opacity $duration $easing;
+}
+
+@mixin slide($direction: "right", $distance: "100%", $duration: $transition-medium, $easing: $ease-in-out) {
+  transition: transform $duration $easing;
+  @if $direction == "right" {
+    transform: translateX($distance);
+  } @else if $direction == "left" {
+    transform: translateX(-$distance);
+  } @else if $direction == "up" {
+    transform: translateY(-$distance);
+  } @else if $direction == "down" {
+    transform: translateY($distance);
+    }
+    }
+    
+    @mixin grow($scale: 1.2, $duration: $transition-medium, $easing: $ease-out) {
+    transition: transform $duration $easing;
+    transform: scale($scale);
+    }
+    
+    @mixin shrink($scale: 0.8, $duration: $transition-medium, $easing: $ease-out) {
+    transition: transform $duration $easing;
+    transform: scale($scale);
+    }
+    
+    @mixin rotate($angle: 90deg, $duration: $transition-medium, $easing: $ease-in-out) {
+    transition: transform $duration $easing;
+    transform: rotate($angle);
+    }
+    
+    @mixin background-transition($duration: $transition-medium, $easing: $ease-in-out) {
+    transition: background-color $duration $easing;
+    }
+    
+    @mixin border-transition($duration: $transition-medium, $easing: $ease-in-out) {
+    transition: border-color $duration $easing;
+    }
+    
+    @mixin color-transition($duration: $transition-medium, $easing: $ease-in-out) {
+    transition: color $duration $easing;
+    }

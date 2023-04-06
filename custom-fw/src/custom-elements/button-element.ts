@@ -2,7 +2,7 @@ import { bindable, customElement } from 'aurelia-framework'
 
 @customElement('custom-button')
 export class CustomButtonElement {
-  @bindable buttonContent: string
+  @bindable buttonContent: string = ''
 
   attached() {
     console.log(`Attached Custom Button Element.`)

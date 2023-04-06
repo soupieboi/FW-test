@@ -8,6 +8,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "animejs": "^3.2.1",
     "aurelia-animator-css": "^1.0.4",
     "aurelia-bootstrapper": "^2.4.0",
     "aurelia-framework": "^1.4.1",
@@ -35,6 +36,7 @@
     "json-loader": "^0.5.7",
     "mini-css-extract-plugin": "^2.7.2",
     "minimatch": "^5.1.2",
+    "node-sass": "^8.0.0",
     "promise-polyfill": "^8.2.3",
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0",
@@ -52,7 +54,8 @@
     "build": "webpack --env production",
     "start": "webpack server",
     "build:dev": "webpack",
-    "analyze": "webpack --env production --analyze"
+    "analyze": "webpack --env production --analyze",
+    "build:scss": "node compilescss.js"
   },
   "engines": {
     "node": ">=14.15.0"
