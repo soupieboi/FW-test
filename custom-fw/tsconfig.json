@@ -19,12 +19,13 @@
     "baseUrl": "src",
     "resolveJsonModule": true,
     "importHelpers": true,
-    "allowJs": true
+    "allowJs": true,
+    "strict": true
   },
   "include": [
     "src",
     "test"
-  ],
+, "compilescss.js"  ],
   "atom": {
     "rewriteTsconfig": false
   }
