@@ -1,7 +1,4 @@
-export class Home {
-  message: string;
+import * as CustomElements from '../custom-elements'
 
-  constructor() {
-    this.message = "Hello World | Home";
-  }
+export class Home {
 }

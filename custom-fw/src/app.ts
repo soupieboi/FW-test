@@ -34,6 +34,12 @@ export class App {
         name: 'contact',
         title: 'Contact',
       },
+      {
+        route: 'controls',
+        moduleId: PLATFORM.moduleName('./pages/controls'),
+        name: 'controls',
+        title: 'Controls'
+      }
     ])
   }
 }
