@@ -1,3 +1,38 @@
-* {
-    min-height: 20px;
-}
+@import 'main';
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 10px;
+    font: $font-family-sans-serif;
+    background-color: transparent;
+    }
+
+    button-element {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    i {
+        font-size: 20px;
+        color: #333;
+    }
+    }
+  }

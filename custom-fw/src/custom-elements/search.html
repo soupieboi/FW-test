@@ -1,5 +1,7 @@
 <template>
-  <div class="search">
-    <button-element></button-element>
+  <require from="./search.scss"></require>
+  <div class="search-container">
+    <input type="text" placeholder.bind="placeholder" value.bind="value & debounce:300" input.delegate="handleInput($event)">
+    <button-element><i class="fa fa-search"></i></button-element>
   </div>
 </template>

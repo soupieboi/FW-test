@@ -1,8 +1,9 @@
 import { PLATFORM } from 'aurelia-pal'
 import { Router, RouterConfiguration } from 'aurelia-router'
+import './global-styles.scss'
 
 export class App {
-  router: Router
+  router!: Router
   message: string
 
   constructor() {

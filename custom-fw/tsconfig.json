@@ -24,7 +24,9 @@
   },
   "include": [
     "src",
-    "test"
+    "test",
+    "src/**/*.ts",
+    "src/**/*.html"
 , "compilescss.js"  ],
   "atom": {
     "rewriteTsconfig": false
